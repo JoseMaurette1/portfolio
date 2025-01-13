@@ -1,11 +1,6 @@
 import type { Metadata } from "next";
-import { Fira_Code, Roboto_Mono } from "next/font/google";
+import { Roboto_Mono } from "next/font/google";
 import "./globals.css";
-
-const firaCode = Fira_Code({
-  variable: "--font-fira-code",
-  subsets: ["latin"],
-});
 
 const roboto = Roboto_Mono({
   variable: "--font-roboto-mono",
