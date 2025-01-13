@@ -21,10 +21,10 @@ const Hero = () => {
           Front End Development with the use of React, Next.js, and TypeScript.
         </p>
       </div>
-      <div className="pt-5">
+      <div className="pt-10">
         <Button
           variant="contained"
-          size="medium"
+          size="large"
           endIcon={<DownloadIcon />}
           className="self-start bg-[#464343] hover:bg-[#353535]"
         >
