@@ -54,6 +54,14 @@ const Projects = () => {
                   transform: "translateY(-10px) scale(1.1)",
                   boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
                 },
+                "& a": {
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                },
+                "& h1, & p": {
+                  textAlign: "center",
+                },
               }}
             >
               <a
