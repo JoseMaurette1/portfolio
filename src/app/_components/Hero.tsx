@@ -13,8 +13,10 @@ const Hero = () => {
         <Image src={"/avatar.svg"} alt="pfp" width={200} height={200} />
       </div>
       <div className="text-start">
-        <h3 className="text-lg pb-4">Hi, my name is</h3>
-        <h1 className="pb-2 text-5xl ">Jose Maurette.</h1>
+        <h3 className="pb-4">Hi, my name is</h3>
+        <h1 className="pb-2 text-5xl font-extrabold tracking-tighter  ">
+          Jose Maurette.
+        </h1>
         <h2 className="pb-4 text-gray-400 text-2xl">I build Websites</h2>
         <p className="text-gray-400">
           I am a Senior at Florida International University Specializing in
@@ -26,7 +28,7 @@ const Hero = () => {
           variant="contained"
           size="large"
           endIcon={<DownloadIcon />}
-          className="self-start bg-[#464343] hover:bg-[#353535]"
+          className="self-start bg-blue-500 hover:bg-[#353535] py-2 px-4 rounded"
         >
           Resume
         </Button>
