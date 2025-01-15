@@ -24,14 +24,16 @@ const Hero = () => {
         </p>
       </div>
       <div className="pt-10">
-        <Button
-          variant="contained"
-          size="large"
-          endIcon={<DownloadIcon />}
-          className="self-start bg-blue-500 hover:bg-[#353535] py-2 px-4 rounded"
-        >
-          Resume
-        </Button>
+        <a href="/Resume.pdf" download>
+          <Button
+            variant="contained"
+            size="large"
+            endIcon={<DownloadIcon />}
+            className="self-start bg-blue-500 hover:bg-[#353535] py-2 px-4 rounded"
+          >
+            Resume
+          </Button>
+        </a>
       </div>
     </div>
   );
