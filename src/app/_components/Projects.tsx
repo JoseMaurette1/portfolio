@@ -8,7 +8,7 @@ const Projects = () => {
     {
       name: "Always",
       image: "/always.svg",
-      href: "",
+      href: "https://alwaysv1.vercel.app",
       description: "Website to track my own personal workouts.",
       stack: ["React", "Next.js", "TypeScript", "Tailwind CSS, Shadcn UI"],
     },
