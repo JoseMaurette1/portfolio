@@ -11,7 +11,7 @@ const Contact = () => {
     {
       name: "LinkedIn",
       image: "/linkedin.svg",
-      href: "https://www.linkedin.com/in/jose-maurette-parada-4a7bb3254/",
+      href: "https://www.linkedin.com/in/josemaurette/",
     },
     {
       name: "GitHub",

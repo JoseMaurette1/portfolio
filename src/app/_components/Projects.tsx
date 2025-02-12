@@ -60,8 +60,8 @@ const Projects = () => {
             {/* Project Box */}
             <Box
               sx={{
-                width: 300, // Adjusted width
-                height: 300, // Adjusted height
+                width: 300,
+                height: 300,
                 backgroundColor: "#434343",
                 display: "flex",
                 flexDirection: "column",
