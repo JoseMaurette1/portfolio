@@ -31,7 +31,7 @@ const Hero = () => {
             endIcon={<DownloadIcon />}
             className="self-start bg-blue-500 hover:bg-[#353535] py-2 px-4 rounded"
           >
-            Download Resume
+            Resume
           </Button>
         </a>
       </div>
