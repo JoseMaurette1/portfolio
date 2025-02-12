@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import { Stack } from "@mui/material";
 import Box from "@mui/material/Box";
 
 const Projects = () => {
@@ -9,39 +8,63 @@ const Projects = () => {
       name: "Always",
       image: "/always.svg",
       href: "https://alwaysv1.vercel.app",
-      description: "Website to track my own personal workouts.",
-      stack: ["React", "Next.js", "TypeScript", "Tailwind CSS, Shadcn UI"],
+      description:
+        "Designed and Developed a full-stack workout tracking app that allows users to log exercises, sets, and reps, leveraging PostgreSQL and Prisma for structured data storage.",
+      stack: [
+        "/react.svg",
+        "/nextjs.svg",
+        "/typescript.svg",
+        "/tailwind.svg",
+        "/shadcn.svg",
+      ],
     },
     {
       name: "Portfolio",
       image: "/portfolio.svg",
       href: "https://github.com/JoseMaurette1",
-      description: "Personal Portfolio Website created to showcase my work.",
-      stack: ["React", "Next.js", "TypeScript", "Tailwind CSS, Material UI"],
+      description:
+        "Personal Dev Portfolio to shocwase Projects, Skills and Resume.",
+      stack: [
+        "/react.svg",
+        "/nextjs.svg",
+        "/typescript.svg",
+        "/tailwind.svg",
+        "/materialui.svg",
+      ],
     },
     {
       name: "TrailTales",
       image: "/trails.svg",
       href: "https://trailtales.vercel.app/",
       description:
-        "Lead Developer and Creator for TrailTales, a hiking app made during my Junior Year for a School Project.",
-      stack: ["React", "Next.js", "TypeScript", "Tailwind CSS, Shadcn UI"],
+        "Lead Developer for interactive Web app that allowed 50+ users to discover and bookmark Hiking Trails.",
+      stack: [
+        "/react.svg",
+        "/nextjs.svg",
+        "/typescript.svg",
+        "/tailwind.svg",
+        "/shadcn.svg",
+      ],
     },
   ];
+
   return (
     <div
       id="Projects"
       className="flex flex-col justify-center items-center mx-auto min-h-[50vh]"
     >
       <h1 className="text-3xl">Projects</h1>
-      <div className="pb-4 pt-8">
-        <Stack direction="row" spacing={4}>
-          {projectsinfo.map((project, index) => (
+      <div className="pb-4 pt-8 w-full flex flex-col items-center space-y-8">
+        {projectsinfo.map((project, index) => (
+          <div
+            key={index}
+            className="flex flex-row items-center space-x-8" // Flex row layout with spacing
+          >
+            {/* Project Box */}
             <Box
-              key={index}
               sx={{
-                width: 400,
-                height: 400,
+                width: 200, // Adjusted width
+                height: 200, // Adjusted height
                 backgroundColor: "#434343",
                 display: "flex",
                 flexDirection: "column",
@@ -53,14 +76,6 @@ const Projects = () => {
                 "&:hover": {
                   transform: "translateY(-10px) scale(1.1)",
                   boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
-                },
-                "& a": {
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                },
-                "& h1, & p": {
-                  textAlign: "center",
                 },
               }}
             >
@@ -77,16 +92,36 @@ const Projects = () => {
                 <Image
                   src={project.image}
                   alt={project.name}
-                  width={100}
-                  height={100}
+                  width={80} // Adjusted image size
+                  height={80}
                 />
                 <h1 className="text-2xl pt-2">{project.name}</h1>
-                <p className="text-lg pt-2">{project.stack.join(", ")}</p>
-                <p className="pt-2">{project.description}</p>
               </a>
             </Box>
-          ))}
-        </Stack>
+
+            {/* Project Stack and Description */}
+            <div className="flex flex-col space-y-4 max-w-md">
+              <div>
+                <h2 className="text-xl font-semibold">Tech Stack</h2>
+                <div className="flex flex-wrap space-x-3">
+                  {project.stack.map((image, index) => (
+                    <Image
+                      key={index}
+                      src={image}
+                      alt="Tech Stack"
+                      width={50}
+                      height={50}
+                    />
+                  ))}
+                </div>
+              </div>
+              <div>
+                <h2 className="text-xl font-semibold">Description</h2>
+                <p className="text-lg">{project.description}</p>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
