@@ -1,6 +1,7 @@
+"use client";
 import React from "react";
 import Image from "next/image";
-import Box from "@mui/material/Box";
+import { motion } from "framer-motion";
 
 const Projects = () => {
   const projectsinfo = [
@@ -48,18 +49,55 @@ const Projects = () => {
     },
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
+
+  const boxVariants = {
+    hover: {
+      y: -10,
+      scale: 1.1,
+      boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
+      transition: { duration: 0.2, ease: "easeInOut" },
+    },
+  };
+
   return (
-    <div
+    <motion.div
       id="Projects"
       className="flex flex-col justify-center items-center mx-auto min-h-[50vh]"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
     >
-      <h1 className="text-3xl">Projects</h1>
+      <motion.h1 className="text-3xl" variants={itemVariants}>
+        Projects
+      </motion.h1>
       <div className="pb-4 pt-8 w-full flex flex-col items-center space-y-8">
         {projectsinfo.map((project, index) => (
-          <div key={index} className="flex flex-row items-center space-x-8">
+          <motion.div
+            key={index}
+            className="flex flex-row items-center space-x-8"
+            variants={itemVariants}
+          >
             {/* Project Box */}
-            <Box
-              sx={{
+            <motion.div
+              style={{
                 width: 300,
                 height: 300,
                 backgroundColor: "#434343",
@@ -69,12 +107,9 @@ const Projects = () => {
                 justifyContent: "center",
                 borderRadius: 10,
                 boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
-                transition: "transform 0.2s ease-in-out",
-                "&:hover": {
-                  transform: "translateY(-10px) scale(1.1)",
-                  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
-                },
               }}
+              variants={boxVariants}
+              whileHover="hover"
             >
               <a
                 target="_blank"
@@ -94,10 +129,13 @@ const Projects = () => {
                 />
                 <h1 className="text-2xl pt-2">{project.name}</h1>
               </a>
-            </Box>
+            </motion.div>
 
             {/* Project Stack and Description */}
-            <div className="flex flex-col space-y-4 max-w-md">
+            <motion.div
+              className="flex flex-col space-y-4 max-w-md"
+              variants={itemVariants}
+            >
               <p className="text-xl">{project.description}</p>
               <h2 className="text-xl font-semibold">Tech Stack:</h2>
               <div>
@@ -115,11 +153,11 @@ const Projects = () => {
                 </div>
               </div>
               <div></div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { Button } from "@mui/material";
 import { DownloadIcon } from "@radix-ui/react-icons";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   const [text, setText] = useState("I Build Websites");
@@ -34,15 +35,41 @@ const Hero = () => {
 
     return () => clearTimeout(timeout);
   }, [text, isDeleting, index, phrases]);
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
+
   return (
-    <div
+    <motion.div
       id="Hero"
       className="flex flex-col justify-center items-center min-h-screen max-w-md mx-auto"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
     >
-      <div className="flex items-center justify-center pb-10">
+      <motion.div
+        className="flex items-center justify-center pb-10"
+        variants={itemVariants}
+      >
         <Image src={"/avatar.svg"} alt="pfp" width={200} height={200} />
-      </div>
-      <div className="text-start">
+      </motion.div>
+      <motion.div className="text-start" variants={itemVariants}>
         <h3 className="pb-2 tracking-tighter">Hi, my name is</h3>
         <h1 className="pb-2 text-5xl font-extrabold tracking-tighter">
           Jose Maurette.
@@ -53,8 +80,8 @@ const Hero = () => {
           I am a Senior at Florida International University Specializing in
           Front End Development with the use of React, Next.js, and TypeScript.
         </p>
-      </div>
-      <div className="pt-10">
+      </motion.div>
+      <motion.div className="pt-10" variants={itemVariants}>
         <a href="/Resume.pdf" download>
           <Button
             variant="contained"
@@ -65,8 +92,8 @@ const Hero = () => {
             Resume
           </Button>
         </a>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
