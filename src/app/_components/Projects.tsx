@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { Apple } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -11,6 +12,20 @@ const Projects = () => {
       href: "https://alwaysv1.vercel.app",
       description:
         "Designed and Developed a full-stack workout tracking app that allows users to log exercises, sets, and reps, leveraging PostgreSQL and Prisma for structured data storage.",
+      stack: [
+        "/react.svg",
+        "/nextjs.svg",
+        "/typescript.svg",
+        "/tailwind.svg",
+        "/shadcn.svg",
+      ],
+    },
+    {
+       name: "Macrotrue",
+      image: "/macrotrue.svg", // Changed from Apple to a string path
+      href: "https://Macrotrue.vercel.app/",
+      description:
+        "Front-end App that allows recommends users 3 daily meals based on their caloric needs in order to reach their goal physique.",
       stack: [
         "/react.svg",
         "/nextjs.svg",
@@ -121,12 +136,21 @@ const Projects = () => {
                   alignItems: "center",
                 }}
               >
-                <Image
-                  src={project.image}
-                  alt={project.name}
-                  width={150}
-                  height={150}
-                />
+                {project.name === "Macrotrue" ? (
+                  <Image
+                    src={project.image}
+                    alt={project.name}
+                    width={150}
+                    height={150}
+                  />
+                ) : (
+                  <Image
+                    src={project.image}
+                    alt={project.name}
+                    width={150}
+                    height={150}
+                  />
+                )}
                 <h1 className="text-2xl pt-2">{project.name}</h1>
               </a>
             </motion.div>
