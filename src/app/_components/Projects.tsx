@@ -6,11 +6,11 @@ import { motion } from "framer-motion";
 const Projects = () => {
   const projectsinfo = [
     {
-      name: "Always",
-      image: "/always.svg",
-      href: "https://alwaysv1.vercel.app",
+      name: "Macrotrue",
+      image: "/macrotrue.svg",
+      href: "https://Macrotrue.vercel.app/",
       description:
-        "Designed and Developed a full-stack workout tracking app that allows users to log exercises, sets, and reps, leveraging PostgreSQL and Prisma for structured data storage.",
+        "Front-end App that allows recommends users 3 daily meals based on their caloric needs in order to reach their goal physique.",
       stack: [
         "/react.svg",
         "/nextjs.svg",
@@ -20,11 +20,11 @@ const Projects = () => {
       ],
     },
     {
-       name: "Macrotrue",
-      image: "/macrotrue.svg", // Changed from Apple to a string path
-      href: "https://Macrotrue.vercel.app/",
+      name: "Always",
+      image: "/always.svg",
+      href: "https://alwaysv1.vercel.app",
       description:
-        "Front-end App that allows recommends users 3 daily meals based on their caloric needs in order to reach their goal physique.",
+        "Designed and Developed a full-stack workout tracking app that allows users to log exercises, sets, and reps, leveraging PostgreSQL and Prisma for structured data storage.",
       stack: [
         "/react.svg",
         "/nextjs.svg",
