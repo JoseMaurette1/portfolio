@@ -10,14 +10,14 @@ const Hero = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [index, setIndex] = useState(0);
 
-  const phrases = [
-    "Software Engineer",
-    "I Solve Problems",
-    "Front End Developer",
-  ];
   useEffect(() => {
-    const currentPhrase = phrases[index];
+    const phrases = [
+      "Software Engineer",
+      "I Solve Problems",
+      "Front End Developer",
+    ];
 
+    const currentPhrase = phrases[index];
     const timeout = setTimeout(() => {
       if (!isDeleting) {
         setText(currentPhrase.substring(0, text.length + 1));
@@ -34,7 +34,7 @@ const Hero = () => {
     }, 100);
 
     return () => clearTimeout(timeout);
-  }, [text, isDeleting, index, phrases]);
+  }, [text, isDeleting, index,]);
 
   const containerVariants = {
     hidden: { opacity: 0 },

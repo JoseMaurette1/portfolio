@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -85,7 +86,7 @@ const Skills = () => {
             className="m-4 transition duration-200 hover:-translate-y-1"
             variants={itemVariants}
           >
-            <img src={icon.image} alt={icon.name} width={100} height={100} />
+            <Image src={icon.image} alt={icon.name} width={100} height={100} />
           </motion.div>
         ))}
       </motion.div>
@@ -99,7 +100,7 @@ const Skills = () => {
             className="m-4 transition duration-200 hover:-translate-y-1"
             variants={itemVariants}
           >
-            <img src={icon.image} alt={icon.name} width={100} height={100} />
+            <Image src={icon.image} alt={icon.name} width={100} height={100} />
           </motion.div>
         ))}
       </motion.div>
