@@ -70,13 +70,13 @@ const Hero = () => {
         <Image src={"/avatar.svg"} alt="pfp" width={200} height={200} />
       </motion.div>
       <motion.div className="text-start" variants={itemVariants}>
-        <h3 className="pb-2 tracking-tighter">Hi, my name is</h3>
-        <h1 className="pb-2 text-5xl font-extrabold tracking-tighter">
+        <h3 className="md:pb-2 md:tracking-tighter ml-5">Hi, my name is</h3>
+        <h1 className="md:pb-2 md:text-5xl md:ml-0 ml-2 text-3xl font-extrabold tracking-tighter">
           Jose Maurette.
         </h1>
         {/* <h3 className="pb-4 text-gray-400 text-2xl">I build Websites</h3> */}
-        <h3 className="pb-4 text-blue-400 text-2xl tracking-tighter">{text}</h3>
-        <p className="text-gray-400 tracking-tighter">
+        <h3 className="pb-4 text-blue-400 text-2xl tracking-tighter md:ml-0 ml-5">{text}</h3>
+        <p className="text-gray-400 tracking-tighter md:ml-0 ml-5">
           I am a Senior at Florida International University Specializing in
           Front End Development with the use of React, Next.js, and TypeScript.
         </p>
