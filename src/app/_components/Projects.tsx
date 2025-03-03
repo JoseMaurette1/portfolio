@@ -107,7 +107,7 @@ const Projects = () => {
         {projectsinfo.map((project, index) => (
           <motion.div
             key={index}
-            className="flex flex-row items-center space-x-8"
+            className="md:flex-row md:space-x-8 flex flex-col items-center space-x-12"
             variants={itemVariants}
           >
             {/* Project Box */}
