@@ -20,6 +20,11 @@ const Contact = () => {
       image: "/github-white.svg",
       href: "https://github.com/JoseMaurette1",
     },
+    {
+      name: "Instagram",
+      image: "/instagram.svg",
+      href: "https://www.instagram.com/hose_04/",
+    },
   ];
 
   const containerVariants = {
