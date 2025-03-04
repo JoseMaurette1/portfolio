@@ -81,13 +81,12 @@ const Skills = () => {
         variants={itemVariants}
       >
         {icons.map((icon, index) => (
-          <motion.div
+          <div
             key={index}
             className="m-4 transition duration-200 hover:-translate-y-1"
-            variants={itemVariants}
           >
             <Image src={icon.image} alt={icon.name} width={100} height={100} />
-          </motion.div>
+          </div>
         ))}
       </motion.div>
       <motion.div
@@ -95,13 +94,12 @@ const Skills = () => {
         variants={itemVariants}
       >
         {secondaryIcons.map((icon, index) => (
-          <motion.div
+          <div
             key={index}
             className="m-4 transition duration-200 hover:-translate-y-1"
-            variants={itemVariants}
           >
             <Image src={icon.image} alt={icon.name} width={100} height={100} />
-          </motion.div>
+          </div>
         ))}
       </motion.div>
     </motion.div>
